@@ -1,9 +1,30 @@
 aid: univers
 name: Univers
-description: 'Univers is a company surfaced as a portfolio company of hongshan and added to the API Evangelist
-  network as a stub for enrichment. Sector: technology. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Univers (formerly Envision Digital) is a Singapore-headquartered company
+  building "The Platform for Physical AI" — its EnOS platform runs real-time,
+  autonomous operations across energy grids, buildings, transportation, and
+  industrial manufacturing, managing over 1,000 GW of energy assets and 400M+
+  connected sensors and devices for 800+ enterprise customers in 45 countries.
+  EnOS exposes open APIs for device connection, models, assets, time-series
+  data, alerts, and data subscription, consumed through the EnOS Application
+  Portal and Developer Console with access-key/secret-key request signing, and
+  ships first-party device and service SDKs for Java, Python, C, Node.js, .NET,
+  and Go.
 url: https://raw.githubusercontent.com/api-evangelist/univers/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://univers.com/wp-content/uploads/2024/10/cropped-Favicon-270x270.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +32,47 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Technology
-apis: []
+- Energy
+- Internet of Things
+- Artificial Intelligence
+- Sustainability
+- Infrastructure
+apis:
+- name: EnOS Open API
+  description: >-
+    The EnOS platform open APIs cover the core platform services — model,
+    device connection, asset, asset tree, alert engine, TSDB time-series data,
+    and data subscription. Applications register in the EnOS Application
+    Portal / Developer Console for an accessKey and secretKey, and every
+    request is signed (the first-party service SDKs generate signatures and
+    assemble gateway URLs automatically). The API gateway address is
+    per-environment; the EU2 instance gateway is used as the reference base
+    URL here. Documentation is hosted on support.enos-iot.com, which may be
+    geo-restricted.
+  humanURL: https://support.enos-iot.com/docs/api/en/3.0.0/overview.html
+  baseURL: https://ag-eu2.envisioniot.com
+  tags:
+  - IoT
+  - Devices
+  - Assets
+  - Time Series
+  - Alerts
+  - Energy
+  properties:
+  - type: Documentation
+    url: https://support.enos-iot.com/docs/enos/en/3.0.0/get_started/portal.html
+  - type: APIReference
+    url: https://support.enos-iot.com/docs/api/en/3.0.0/overview.html
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +81,47 @@ maintainers:
 common:
 - type: Website
   url: https://univers.com
+- type: DeveloperPortal
+  url: https://developer.envisioniot.com/
+- type: Documentation
+  url: https://support.enos-iot.com/docs/
+- type: APIReference
+  url: https://support.enos-iot.com/docs/api/en/3.0.0/overview.html
+- type: GitHubOrganization
+  url: https://github.com/EnvisionIot
+- type: Blog
+  url: https://univers.com/blog/
+- type: Support
+  url: https://support.enos-iot.com/
+- type: Login
+  url: https://univers.com/login/
+- type: Contact
+  url: https://univers.com/contact-us/
+- type: TermsOfService
+  url: https://univers.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://univers.com/privacy-policy/
+- type: Compliance
+  url: https://univers.com/security-compliance/
+- type: TrustCenter
+  url: security/univers-trust-center.yml
+- type: DomainSecurity
+  url: security/univers-domain-security.yml
+- type: Packages
+  url: packages/univers-packages.yml
+- type: SDKs
+  url: packages/univers-packages.yml
+- type: WellKnown
+  url: well-known/univers-well-known.yml
+- type: LLMsTxt
+  url: llms/univers-llms.txt
+- type: Protobuf
+  name: EnOS Data Subscription protocol (sub.proto)
+  url: grpc/univers-enos-subscription-sub.proto
+- type: Protobuf
+  name: EnOS Data Subscription common messages (common.proto)
+  url: grpc/univers-enos-subscription-common.proto
+- type: Conformance
+  url: conformance/univers-conformance.yml
+- type: Authentication
+  url: authentication/univers-authentication.yml

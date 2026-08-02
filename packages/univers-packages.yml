@@ -1,0 +1,140 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/EnvisionIot
+description: >-
+  First-party client libraries for Univers (formerly Envision Digital) and its
+  EnOS platform, published under the EnvisionIot GitHub organization and the
+  com.envisioniot Maven group. Verified against PyPI, Maven Central, npm, and
+  the GitHub org (22 repositories). The EnOS documentation hosts
+  (support.enos-iot.com / support.envisioniot.com) were unreachable from the
+  probe location at fetch time, so registry + GitHub metadata is the source of
+  record. Maven Central lists 35 com.envisioniot artifacts; the key
+  developer-facing SDKs are captured below.
+packages:
+  - language: java
+    registry: maven
+    name: com.envisioniot:enos-api
+    url: https://central.sonatype.com/artifact/com.envisioniot/enos-api
+    source: https://github.com/EnvisionIot/enos-api-sdk-java
+    install: 'maven: com.envisioniot:enos-api:2.3.7'
+    official: true
+    note: EnOS Service (OpenAPI) SDK for Java — request signing, URL assembly, response parsing.
+  - language: java
+    registry: maven
+    name: com.envisioniot:enos-api-common
+    url: https://central.sonatype.com/artifact/com.envisioniot/enos-api-common
+    source: https://github.com/EnvisionIot/enos-api-common-sdk-java
+    install: 'maven: com.envisioniot:enos-api-common:2.1.5'
+    official: true
+  - language: java
+    registry: maven
+    name: com.envisioniot:enos-mqtt
+    url: https://central.sonatype.com/artifact/com.envisioniot/enos-mqtt
+    source: https://github.com/EnvisionIot/enos-mqtt-sdk-java
+    install: 'maven: com.envisioniot:enos-mqtt:2.4.0'
+    official: true
+    note: EnOS IoT MQTT device SDK for Java.
+  - language: java
+    registry: maven
+    name: com.envisioniot:enos-http
+    url: https://central.sonatype.com/artifact/com.envisioniot/enos-http
+    source: https://github.com/EnvisionIot/enos-device-sdk-java
+    install: 'maven: com.envisioniot:enos-http:2.4.0'
+    official: true
+    note: EnOS HTTP device connectivity SDK for Java.
+  - language: java
+    registry: maven
+    name: com.envisioniot:enos-subscribe
+    url: https://central.sonatype.com/artifact/com.envisioniot/enos-subscribe
+    source: https://github.com/EnvisionIot
+    install: 'maven: com.envisioniot:enos-subscribe:3.0.3'
+    official: true
+    note: EnOS Data Subscription service client for Java (protobuf-over-TCP streaming).
+  - language: java
+    registry: maven
+    name: com.envisioniot:enos-app-portal-sdk
+    url: https://central.sonatype.com/artifact/com.envisioniot/enos-app-portal-sdk
+    source: https://github.com/EnvisionIot
+    install: 'maven: com.envisioniot:enos-app-portal-sdk:0.0.25'
+    official: true
+    note: EnOS Application Portal SSO/integration SDK for Java.
+  - language: python
+    registry: pypi
+    name: enos-api-sdk-python
+    url: https://pypi.org/project/enos-api-sdk-python/
+    source: https://github.com/EnvisionIot/enos-api-sdk-python.git
+    install: pip install enos-api-sdk-python
+    official: true
+    note: EnOS OpenAPI SDK for Python (v0.0.4).
+  - language: python
+    registry: pypi
+    name: enos-mqtt-sdk-python
+    url: https://pypi.org/project/enos-mqtt-sdk-python/
+    source: https://github.com/EnvisionIot
+    install: pip install enos-mqtt-sdk-python
+    official: true
+    note: EnOS MQTT device SDK for Python (v0.1.1).
+  - language: python
+    registry: pypi
+    name: enos-poseidon
+    url: https://pypi.org/project/enos-poseidon/
+    source: https://github.com/EnvisionIot
+    install: pip install enos-poseidon
+    official: true
+    note: EnOS API request-signing client ("poseidon") for Python (v0.2.0).
+  - language: python
+    registry: github
+    name: enos-device-sdk-python
+    url: https://github.com/EnvisionIot/enos-device-sdk-python
+    source: https://github.com/EnvisionIot/enos-device-sdk-python
+    install: git clone https://github.com/EnvisionIot/enos-device-sdk-python
+    official: true
+    note: Python SDK for connecting devices to EnOS Cloud (MQTT).
+  - language: python
+    registry: github
+    name: enos-subscription-service-sdk-python
+    url: https://github.com/EnvisionIot/enos-subscription-service-sdk-python
+    source: https://github.com/EnvisionIot/enos-subscription-service-sdk-python
+    install: git clone https://github.com/EnvisionIot/enos-subscription-service-sdk-python
+    official: true
+    note: EnOS Data Subscription consumer SDK for Python.
+  - language: javascript
+    registry: npm
+    name: enos-device-sdk-nodejs-core
+    url: https://www.npmjs.com/package/enos-device-sdk-nodejs-core
+    source: https://github.com/EnvisionIot/enos-device-sdk-nodejs
+    install: npm install enos-device-sdk-nodejs-core
+    official: true
+    note: Core component of the EnOS device SDK for Node.js.
+  - language: javascript
+    registry: npm
+    name: '@envision-digital/enos-app-portal-sdk'
+    url: https://www.npmjs.com/package/@envision-digital/enos-app-portal-sdk
+    source: https://github.com/EnvisionIot
+    install: npm install @envision-digital/enos-app-portal-sdk
+    official: true
+    note: EnOS Application Portal SDK for JavaScript.
+  - language: csharp
+    registry: github
+    name: enos-subscription-service-sdk-dotnet
+    url: https://github.com/EnvisionIot/enos-subscription-service-sdk-dotnet
+    source: https://github.com/EnvisionIot/enos-subscription-service-sdk-dotnet
+    install: git clone https://github.com/EnvisionIot/enos-subscription-service-sdk-dotnet
+    official: true
+    note: EnOS Data Subscription consumer SDK for .NET.
+  - language: c
+    registry: github
+    name: enos-device-sdk-c
+    url: https://github.com/EnvisionIot/enos-device-sdk-c
+    source: https://github.com/EnvisionIot/enos-device-sdk-c
+    install: git clone https://github.com/EnvisionIot/enos-device-sdk-c
+    official: true
+    note: C SDK for connecting devices to EnOS Cloud.
+  - language: go
+    registry: github
+    name: edge-subscription-service-sdk-go
+    url: https://github.com/EnvisionIot/edge-subscription-service-sdk-go
+    source: https://github.com/EnvisionIot/edge-subscription-service-sdk-go
+    install: git clone https://github.com/EnvisionIot/edge-subscription-service-sdk-go
+    official: true
+    note: EnOS Edge subscription service SDK for Go.

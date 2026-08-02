@@ -1,0 +1,56 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Univers security-compliance page (univers.com/security-compliance/), the
+  EnvisionIot GitHub organization SDKs, and live well-known probes. The EnOS
+  documentation hosts were unreachable from the probe location, so
+  docs-documented conventions (pagination, idempotency, error envelope) are
+  left unasserted rather than guessed.
+standards:
+  - id: iso-27001
+    conforms: true
+    evidence: >-
+      univers.com/security-compliance/ states Univers is "built on a standard
+      infrastructure governance model that includes ISO/IEC 27001, NIST
+      Special Publication 800-53, CIS benchmarks, GDPR, and more."
+  - id: nist-800-53
+    conforms: true
+    evidence: Named in the Standards and Compliance Framework on univers.com/security-compliance/.
+  - id: cis-benchmarks
+    conforms: true
+    evidence: Named in the Standards and Compliance Framework on univers.com/security-compliance/.
+  - id: gdpr
+    conforms: true
+    evidence: Named in the Standards and Compliance Framework on univers.com/security-compliance/.
+  - id: mqtt
+    conforms: true
+    evidence: >-
+      First-party EnOS device SDKs connect devices to EnOS Cloud over MQTT
+      (github.com/EnvisionIot/enos-mqtt-sdk-java, enos-device-sdk-python,
+      enos-device-sdk-c, enos-device-sdk-nodejs).
+  - id: x509-device-certificates
+    conforms: true
+    evidence: >-
+      EnOS certificate service issues per-device certificates for securing
+      device-to-cloud communication (univers.com/security-compliance/;
+      github.com/EnvisionIot/enos-cert-tool).
+  - id: protobuf
+    conforms: true
+    evidence: >-
+      EnOS Data Subscription service streams telemetry with protobuf messages
+      (grpc/univers-enos-subscription-sub.proto, harvested from the
+      first-party Python subscription SDK).
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      No OAuth 2.0 surface found: EnOS Open APIs authenticate with application
+      accessKey/secretKey request signing (SDK-generated signatures), not
+      OAuth flows.
+  - id: oidc
+    conforms: false
+    evidence: >-
+      No /.well-known/openid-configuration published on univers.com (404);
+      EnOS docs hosts unreachable from probe location.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404 on univers.com.

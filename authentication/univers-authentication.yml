@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/EnvisionIot
+docs: https://support.enos-iot.com/docs/api/en/3.0.0/overview.html
+description: >-
+  Authentication profile for the Univers EnOS platform APIs, assembled from the
+  first-party SDKs on the EnvisionIot GitHub org and the EnOS API documentation
+  (the docs host itself was unreachable from the probe location; SDK sources
+  are the verified evidence). No OpenAPI document is published, so this profile
+  is searched rather than derived from securitySchemes.
+summary:
+  types: [apiKey-signature, mqtt-credentials, subscription-signature]
+  api_key_in: [request signature]
+  oauth2_flows: []
+schemes:
+  - name: EnOS service API request signing
+    type: apiKey
+    style: accessKey + secretKey HMAC-style request signature
+    description: >-
+      Applications are registered in the EnOS Application Portal / Developer
+      Console to obtain an application accessKey and secretKey. Every EnOS
+      Open API request is signed with these credentials; the service SDKs
+      (com.envisioniot:enos-api for Java, enos-api-sdk-python and
+      enos-poseidon for Python) generate the API request signature
+      automatically and assemble the request URL against the per-environment
+      API gateway address.
+    sources:
+      - https://github.com/EnvisionIot/enos-api-sdk-java
+      - https://github.com/EnvisionIot/enos-api-sdk-python
+      - https://pypi.org/project/enos-poseidon/
+  - name: EnOS device connectivity (MQTT/HTTP device secrets)
+    type: apiKey
+    style: productKey/deviceKey/deviceSecret over MQTT or HTTP
+    description: >-
+      Devices connect to EnOS Cloud through the MQTT or HTTP device SDKs using
+      per-device credentials (product key, device key, device secret), with
+      optional X.509 device certificates issued by the EnOS certificate
+      service to secure device-to-cloud communication.
+    sources:
+      - https://github.com/EnvisionIot/enos-device-sdk-python
+      - https://github.com/EnvisionIot/enos-device-sdk-java
+      - https://github.com/EnvisionIot/enos-cert-tool
+  - name: EnOS data subscription authentication
+    type: apiKey
+    style: accessKey + subscription id + signature (protobuf AuthReq)
+    description: >-
+      The data-subscription streaming protocol authenticates consumers with an
+      AuthReq protobuf message carrying accessKey, subId, and a sign field
+      (see grpc/univers-enos-subscription-sub.proto, harvested verbatim from
+      the first-party Python subscription SDK).
+    sources:
+      - https://github.com/EnvisionIot/enos-subscription-service-sdk-python

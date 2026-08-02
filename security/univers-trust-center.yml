@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+url: https://univers.com/security-compliance/
+title: Security and Compliance | Univers
+certifications: [ISO 27001, GDPR]
+frameworks: [ISO/IEC 27001, NIST SP 800-53, CIS Benchmarks, GDPR]
+evidence:
+  - source: https://univers.com/security-compliance/
+    status: 200
+    keywords: [iso/iec 27001, nist special publication 800-53, cis benchmarks, gdpr, penetration testing, certifications and compliance]
+    excerpt: >-
+      "Standards and Compliance Framework — Univers is built on a standard
+      infrastructure governance model that includes ISO/IEC 27001, NIST Special
+      Publication 800-53, CIS benchmarks, GDPR, and more." The page also
+      documents third-party penetration testing, vendor compliance / third-party
+      risk management, secure-by-design SDLC, device certificate security from
+      edge (OT/IoT) to cloud, and a 24x7 AIoT & IT SOC monitoring service.
+notes: >-
+  Univers publishes its security and compliance posture as a dedicated page on
+  the corporate site rather than a trust.<domain> subdomain. The automated
+  trust-center probe misses it because the path is /security-compliance/
+  (probe checks /trust, /security, /compliance). No SOC 2 attestation claim
+  found on the page; ISO/IEC 27001 and GDPR are named alongside NIST 800-53
+  and CIS benchmarks as the governance model. No public vulnerability
+  disclosure / bug bounty program and no security.txt was found on univers.com.

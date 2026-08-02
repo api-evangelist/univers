@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+host: https://univers.com
+description: >-
+  Probe of the /.well-known/ discovery surface on the Univers corporate host
+  (univers.com) and the EnOS platform hosts. univers.com answers but publishes
+  no well-known documents. The EnOS documentation/developer hosts
+  (support.enos-iot.com, support.envisioniot.com, developer.envisioniot.com —
+  all resolving to 82.156.136.113) were unreachable from the probe location
+  (connection timed out), recorded as status 0.
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 200
+    note: WordPress/Yoast robots.txt pointing at https://univers.com/sitemap_index.xml (not saved — no API discovery content).
+other_hosts:
+  - host: https://support.enos-iot.com
+    documents:
+      - {path: /.well-known/security.txt, status: 0, note: connection timed out}
+      - {path: /llms.txt, status: 0, note: connection timed out}
+  - host: https://developer.envisioniot.com
+    documents:
+      - {path: /.well-known/security.txt, status: 0, note: connection timed out}
