@@ -50,7 +50,7 @@ x-enrichment:
   artifacts_added: 9
   pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-10-06'
 tags:
 - Company
 - Technology
@@ -99,6 +99,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://univers.com/news/
+  type: Blog
+- url: https://univers.com/feed/
+  type: BlogRSS
 - type: Website
   url: https://univers.com
 - type: DeveloperPortal
